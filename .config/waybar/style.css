@@ -1,12 +1,12 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: Prompt, "Font Awesome 6 Free";
-
     font-size: 13px;
 }
 
 window#waybar {
-    background-color: transparent;
+    background-color: rgba(12, 39, 51, 0.5);
+    border: 1px solid rgba(238, 238, 238, 0.3);
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
     color: #ffffff;
     transition-property: background-color;
@@ -27,7 +27,7 @@ window#waybar.solo {
 */
 
 window#waybar.termite {
-    background-color: rgba(27,23,37, 1);
+    background-color: rgba(10, 58, 80, 1);
 }
 
 window#waybar.chromium {
@@ -50,20 +50,25 @@ button:hover {
 }
 
 #workspaces {
-    background-color: rgba(27,23,37, 0.8);
-    border-radius: 20px;
-    padding: 0 13px;
+    background-color: rgba(10, 58, 80, 0.8);
 }
 
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
     color: #ffffff;
+    font-weight: bold;
 }
 
 #workspaces button:hover {
-    background: rgba(27,23,37, 1);
+    background: rgba(10, 58, 80, 1)
 }
+
+#workspaces button.active {
+    background: rgba(0, 156, 228, 0.8);
+    color: #dfdfdf;
+}
+
 
 #workspaces button.focused {
     background-color: #64727D;
@@ -79,7 +84,6 @@ button:hover {
     border-bottom: 3px solid #ffffff;
 }
 
-#clock,
 #cpu,
 #memory,
 #disk,
@@ -89,10 +93,11 @@ button:hover {
 #tray,
 #mode,
 #idle_inhibitor,
+#language,
 #mpd {
     padding: 0 10px;
+    margin: 5px 0;
     color: #ffffff;
-    border-radius: 10px;
 }
 
 #window,
@@ -101,23 +106,54 @@ button:hover {
 }
 
 #window {
-    background-color: rgba(27,23,37, 0.8);
+    background-color: rgba(0, 156, 228, 0.8);
+    margin: 5px 0;
     border-radius: 20px;
-    padding: 0 13px;
+    font-weight: bold;
+    padding: 0 15px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
+.modules-left>widget:first-child>#workspaces {
     margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
+.modules-right>widget:last-child>#workspaces {
     margin-right: 0;
 }
 
+#tray {
+    background-color: #0a3a50;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 10px 0 0 10px;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray>.needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#pulseaudio {
+    background-color: #0a3a50;
+    margin-right: 10px;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 0 10px 10px 0;
+}
+
+#pulseaudio.muted {
+    background-color: #f53c3c;
+    color: #2a5c45;
+}
+
 #clock {
-    background-color: #534b62;
+    background-color: #0a3a50;
+    padding: 0 10px;
+    color: #ffffff;
 }
 
 label:focus {
@@ -125,34 +161,29 @@ label:focus {
 }
 
 #cpu {
-    background-color: #534b62;
+    background-color: #146C94;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 10px 0 0 10px;
 }
 
 #memory {
-    background-color: #534b62;
+    background-color: #146C94;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 #disk {
-    background-color: #534b62;
+    background-color: #146C94;
+    margin-right: 10px;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 0 10px 10px 0;
 }
 
 #network {
-    background-color: #534b62;
+    background-color: #146C94;
 }
 
 #network.disconnected {
     background-color: #f53c3c;
-}
-
-#pulseaudio {
-    /* background-color: #f1c40f; */
-    background-color: #534b62;
-    color: #FFFFFF;
-}
-
-#pulseaudio.muted {
-    background-color: #f53c3c;
-    color: #2a5c45;
 }
 
 #wireplumber {
@@ -161,19 +192,6 @@ label:focus {
 
 #wireplumber.muted {
     background-color: #f53c3c;
-}
-
-#tray {
-    background-color: #534b62;
-}
-
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
 }
 
 #idle_inhibitor {
@@ -186,7 +204,7 @@ label:focus {
 }
 
 #mpd {
-    background-color: #534b62;
+    background-color: #146C94;
     color: #2a5c45;
 }
 
@@ -203,9 +221,13 @@ label:focus {
 }
 
 #language {
-    background: #534b62;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
+    background: #146C94;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#custom-power {
+    background-color: rgba(0, 156, 228, 1);
+    padding: 0 10px;
 }
