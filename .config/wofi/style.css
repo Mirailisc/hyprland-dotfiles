@@ -1,0 +1,58 @@
+* {
+    font-family: NotoSans, sans-serif;
+}
+
+window {
+    margin: 0px;
+    border: 1px solid #146C94;
+    border-radius: 5px;
+    background-color: #051f2b;
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: #000000;
+    background-color: #F6F1F1;
+    border: none;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #051f2b;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #051f2b;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: #F6F1F1;
+}
+
+#entry.activatable #text {
+    color: #051f2b;
+}
+
+#entry>* {
+    color: #F6F1F1;
+}
+
+#entry:selected {
+    background-color: #146C94;
+    border-radius: 5px;
+}
+
+#entry:selected #text {
+    font-weight: bold;
+}
