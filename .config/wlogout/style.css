@@ -25,25 +25,25 @@ button:hover {
 }
 
 #lock {
-	background-image: image(url("/home/mirailisc/.config/wlogout/icons/Lock_1.png"));
+	background-image: image(url("/home/<user>/.config/wlogout/icons/Lock_1.png"));
 }
 
 #logout {
-	background-image: image(url("/home/mirailisc/.config/wlogout/icons/Logout_1.png"));
+	background-image: image(url("/home/<user>/.config/wlogout/icons/Logout_1.png"));
 }
 
 #suspend {
-	background-image: image(url("/home/mirailisc/.config/wlogout/icons/Suspend_1.png"));
+	background-image: image(url("/home/<user>/.config/wlogout/icons/Suspend_1.png"));
 }
 
 #hibernate {
-	background-image: image(url("/home/mirailisc/.config/wlogout/icons/Hibernate_1.png"));
+	background-image: image(url("/home/<user>/.config/wlogout/icons/Hibernate_1.png"));
 }
 
 #shutdown {
-	background-image: image(url("/home/mirailisc/.config/wlogout/icons/Shutdown_1.png"));
+	background-image: image(url("/home/<user>/.config/wlogout/icons/Shutdown_1.png"));
 }
 
 #reboot {
-	background-image: image(url("/home/mirailisc/.config/wlogout/icons/Reboot_1.png"));
+	background-image: image(url("/home/<user>/.config/wlogout/icons/Reboot_1.png"));
 }
