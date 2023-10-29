@@ -15,10 +15,10 @@ My personal Hyprland dotfiles
 
 ## Specs
 
-OS : Arch Linux
-CPU : R5 3600
-RAM : 32 GB DDR4
-GPU : RTX 2060s
+- OS : Arch Linux
+- CPU : R5 3600
+- RAM : 32 GB DDR4
+- GPU : RTX 2060s
 
 ## What to do
 
