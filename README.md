@@ -13,13 +13,6 @@ My personal Hyprland dotfiles
 - Alacritty (terminal emulator)
 - Zshrc (Zsh config file)
 
-## Specs
-
-- OS : Arch Linux
-- CPU : R5 3600
-- RAM : 32 GB DDR4
-- GPU : RTX 2060s
-
 ## What to do
 
 Clone this repo
