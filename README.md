@@ -13,7 +13,7 @@ My personal Hyprland dotfiles
 - Alacritty (terminal emulator)
 - Zshrc (Zsh config file)
 
-## What to do
+## Usage
 
 Clone this repo
 
